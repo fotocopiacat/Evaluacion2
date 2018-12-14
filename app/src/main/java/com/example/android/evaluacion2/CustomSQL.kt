@@ -61,9 +61,14 @@ class CustomSQL(val context: Context,
             if (cursor.moveToFirst()) {
                 do {
                     val id = cursor.getInt(0)
-                    val mensaje = cursor.getString(1)
-                    val registro = Registro(id, mensaje)
-                    lista.add(registro)
+                    val nameProduct = cursor.getString(1)
+                    val stock = cursor.getInt(2)
+                    val price = cursor.getDouble(3)
+                    val category = cursor.getString(4)
+
+
+                    val product = Product(id, nameProduct, stock, price, category)
+                    lista.add(product)
                 } while (cursor.moveToNext())
 
             }
