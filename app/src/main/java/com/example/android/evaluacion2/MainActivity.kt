@@ -64,8 +64,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 // Handle the camera action
             }
             R.id.nav_addProduct -> {
-                //val intent = Intent(this, RegistroActivity::class.java)
-               //startActivity(intent)
                 val fm = supportFragmentManager
                 val ft = fm.beginTransaction()
                 val frag = ContentFrag()
@@ -77,9 +75,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_searchProduct -> {
 
             }
-         //   R.id.nav_getUsd ->
-         //   {
-         //   }
+            R.id.nav_getUsd -> {
+                val fm = supportFragmentManager
+                val ft = fm.beginTransaction()
+                val frag = ContentFrag()
+                frag.miContexto = this
+                ft.replace(R.id.frmLy_dolarValue,frag)
+                ft.commit()
+            }
 
 
 

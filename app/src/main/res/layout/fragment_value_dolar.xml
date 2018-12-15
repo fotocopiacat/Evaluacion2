@@ -3,7 +3,7 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".valueDolarFragment">
+             tools:context=".valueDolarFragment" android:id="@+id/frmLy_dolarValue">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
