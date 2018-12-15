@@ -77,6 +77,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_searchProduct -> {
 
             }
+            R.id.nav_getUsd -> {
+
+            }
+
+
+
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
