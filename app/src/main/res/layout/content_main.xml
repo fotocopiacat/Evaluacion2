@@ -9,8 +9,13 @@
         tools:showIn="@layout/app_bar_main"
         tools:context=".MainActivity" android:orientation="vertical" android:id="@+id/layMain">
 
-    <TextView
-            android:text="(si se ve es porque esta cargando ok)"
+    <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/lblTest"/>
+            android:layout_height="match_parent" android:id="@+id/layFragMain">
+        <TextView
+                android:text="SOY MAIN CONTENT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView4"/>
+    </LinearLayout>
 </LinearLayout>
