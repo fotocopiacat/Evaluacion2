@@ -1,7 +1,6 @@
 package com.example.android.evaluacion2
 
 import android.content.ContentValues
-import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
@@ -9,10 +8,11 @@ import android.util.Log
 import android.widget.Toast
 import java.sql.SQLException
 
-class CustomSQL(val context: Context,
-                val name: String,
-                val factory: SQLiteDatabase.CursorFactory?,
-                var version: Int): SQLiteOpenHelper(context,name,factory,version) {
+class CustomSQL (
+    val context: ContentFrag,
+    val name: String,
+    val factory: SQLiteDatabase.CursorFactory?,
+    var version: Int): SQLiteOpenHelper(context,name,factory,version) {
 
     override fun onCreate(db: SQLiteDatabase?) {
         val query = "CREATE TABLE Product(id INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -65,12 +65,9 @@ class CustomSQL(val context: Context,
                     val stock = cursor.getInt(2)
                     val price = cursor.getDouble(3)
                     val category = cursor.getString(4)
-
-
                     val product = Product(id, nameProduct, stock, price, category)
                     lista.add(product)
                 } while (cursor.moveToNext())
-
             }
             db.close()
             return lista
@@ -78,8 +75,5 @@ class CustomSQL(val context: Context,
             Toast.makeText(context, "Error al listar ${e.message}", Toast.LENGTH_SHORT).show()
         }
         return lista
-
     }
-
-
 }

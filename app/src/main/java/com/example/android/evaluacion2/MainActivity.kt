@@ -77,9 +77,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_searchProduct -> {
 
             }
-            R.id.nav_getUsd -> {
-
-            }
+         //   R.id.nav_getUsd ->
+         //   {
+         //   }
 
 
 
