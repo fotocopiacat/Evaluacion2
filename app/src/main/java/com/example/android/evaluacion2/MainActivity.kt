@@ -83,9 +83,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 ft.replace(R.id.frmLy_dolarValue,frag)
                 ft.commit()
             }
-
-
-
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)

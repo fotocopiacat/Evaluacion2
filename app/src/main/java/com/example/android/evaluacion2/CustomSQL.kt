@@ -2,6 +2,7 @@ package com.example.android.evaluacion2
 
 import android.content.ContentValues
 import android.database.Cursor
+import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
@@ -9,7 +10,7 @@ import android.widget.Toast
 import java.sql.SQLException
 
 class CustomSQL (
-    val context: ContentFrag,
+    val context: Context,
     val name: String,
     val factory: SQLiteDatabase.CursorFactory?,
     var version: Int): SQLiteOpenHelper(context,name,factory,version) {
@@ -44,13 +45,11 @@ class CustomSQL (
             }else{
                 Toast.makeText(context, "Producto agregado", Toast.LENGTH_SHORT).show()
             }
-
         }catch (e: SQLException){
             Toast.makeText(context,"Error al insertar ${e.message}", Toast.LENGTH_SHORT).show()
             Log.e("sqlListar", e.message)
         }
     }
-
 
     fun listar(): ArrayList<Product> {
         var lista = ArrayList<Product>()
