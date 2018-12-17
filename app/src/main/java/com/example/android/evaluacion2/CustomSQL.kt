@@ -51,7 +51,7 @@ class CustomSQL(val context: Context,
         }
     }
 
-
+//esta funcion es para listar algo
     fun listar(): ArrayList<Product> {
         var lista = ArrayList<Product>()
         try {
