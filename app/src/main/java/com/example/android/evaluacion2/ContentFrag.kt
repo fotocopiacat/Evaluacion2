@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_content.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -36,6 +37,12 @@ class ContentFrag : Fragment() {
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+        }
+
+        btnGuardar.setOnClickListener {
+
+            val customSQL = CustomSQL(this, "Producto", null, 1)
+
         }
    }
 
